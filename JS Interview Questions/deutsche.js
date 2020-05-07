@@ -7,9 +7,16 @@ console.log(3);
 2
 
 function foo() {
-  var bar = function () { console.log(3) }
+  function bar() { console.log(3) }
   return bar();
-  var bar = function () { console.log(8) }
+  function bar() { console.log(8) }
+}
+foo();
+
+function foo() {
+  var bar = function() { console.log(3) }
+  return bar();
+  var bar = function() { console.log(8) }
 }
 foo();
 
@@ -24,15 +31,13 @@ Sum(3)(3)(3)(4) = 9
 
 const sum = (a) => (b) => (c) => (a + b + c);
 
-var, let, const
+//  var, let, const
 
 const a = [1];
 a.push(2);
 console.log(a); // 1,2
 
-
-
-variable, function, class
+// variable, function, class
 
 var add_the_handlers = function (nodes) {
   for (let i = 0; i < nodes.length; i += 1) {
@@ -41,7 +46,6 @@ var add_the_handlers = function (nodes) {
     }
   }
 };
-
 
 // IIFE
 (function () {
@@ -65,6 +69,7 @@ for (var i = 0; i < arr.length; i++) {
 
 console.log(1);
 
+const arr = [10, 12, 15, 21];
 for (let i = 0; i < arr.length; i++) {
   setTimeout(function () {
     console.log('Index: ' + i + ', element: ' + arr[i]);
@@ -163,7 +168,7 @@ function bar() {
   this.printx = function () { };
 }
 
-bar.__proto = foo;
+bar.__proto__ = foo;
 
 
 
