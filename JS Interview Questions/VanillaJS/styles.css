@@ -1,0 +1,13 @@
+.card {
+  border: 1px #eee solid;
+    height: 200px;
+    width: 200px;
+    background: beige;
+    display: flex;
+}
+
+.innerContainer {
+  padding: 10px;
+  flex: 1;
+  border: 1px red solid;
+}

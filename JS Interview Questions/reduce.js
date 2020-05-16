@@ -6,7 +6,7 @@ const reduce = (cb, initial) => {
   if (isInitialUndefined && arr.length >= 1) initial = arr[0];
   let acc = initial;
   for (let i = isInitialUndefined ? 1 : 0; i < arr.length; i++) {
-    acc = cb(acc, arr[i]);
+    acc = cb(acc, arr[i], i, arr);
   }
   return acc;
 };
