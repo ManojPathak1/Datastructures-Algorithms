@@ -23,18 +23,3 @@ function cachingDecorator(func) {
     return result;
   }
 }
-
-
-
-function throttle(func, delay) {
-  let callFunc = true;
-  return (...args) => {
-    if (callFunc) {
-      callFunc = false;
-      func.apply(this, args);
-      setTimeout(() => {
-        callFunc = true;
-      }, delay);
-    }
-  }
-}
