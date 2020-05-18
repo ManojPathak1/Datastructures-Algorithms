@@ -58,3 +58,5 @@ function registerListeners(type) {
 }
 
 registerListeners("bubble");
+
+// TODO: stopPropagation and stopImmediatePropagation
