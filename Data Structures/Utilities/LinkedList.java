@@ -10,10 +10,8 @@ class LinkedList {
       return;
     }
     Node current = head;
-    while(current.next != null) {
-      current = current.next;
-    }
-    current.next = new Node(e);
+    while(current.next != null) current = current.next;
+    current.next = newNode;
   }
   public void print() {
     Node current = head;
