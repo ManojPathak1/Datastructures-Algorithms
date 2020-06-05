@@ -3,35 +3,26 @@
 
 class Solution {
   public List<List<Integer>> threeSum(int[] nums) {
-    HashMap<Integer, Pair> hmap = new HashMap<>();
-    List<List<Integer>> list = new ArrayList<>();
-    int n = sums.length;
-    for (int i = 0; i < n - 1; i++) {
-      for (int j = i + 1; j < n; j++) {
-        int pairSum = nums[i] + nums[j];
-        hmap.put(pairSum, new Pair(i, j));
+    Arrays.sort(nums);
+    int n = nums.length;
+    List<List<Integer>> result = new LinkedList();
+    for (int i = 0; i < n - 2; i++) {
+      if (i > 0 && nums[i - 1] == nums[i]) continue;
+      int l = i + 1;
+      int h = n - 1;
+      int sum = 0 - nums[i];
+      while (l < h) {
+        int pairSum = nums[l] + nums[h];
+        if (sum == pairSum) {
+          result.add(Arrays.asList(nums[i], nums[l], nums[h]));
+          while (l < h && nums[l] == nums[l + 1]) l++;
+          while (l < h && nums[h] == nums[h - 1]) h--;
+          l++;
+          h--;
+        } else if (sum > pairSum) l++;
+        else h--;
       }
     }
-    for (int i = 0; i < n; i++) {
-      int num = nums[i];
-      num -= 2 * num;
-      Pair p = hmap.get(num);
-      if (hmap.containsKey(num) && p.i != i && p.j != i) {
-        List<Integer> l = new ArrayList<Integer>();
-        l.addAll(List.of(nums[p.i], nums[p.j], nums[i]));
-        list.add(l)
-      } 
-    }
-    return list;
+    return result;
   }
 }
-
-class Pair {
-  int x, y;
-  Pair(int x, int y) {
-    this.x = x;
-    this.y = y;
-  }
-}
-
-//  Sample test case not passed.
