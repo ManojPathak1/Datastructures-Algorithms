@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Mono&display=swap" as="style">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script defer src="app.js"></script>
+    <title>Event Bubbling Capturing</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Event Bubbling Capturing</h1>
+      <div style="margin: 20px;">
+        <input checked="true" onchange="onChangeInput(event)" type="radio" id="bubble" name="eventType" value="bubble">
+        <label for="male">Bubbling</label>
+        <input onchange="onChangeInput(event)" type="radio" id="capture" name="eventType" value="capture">
+        <label for="male">Capturing</label>
+      </div>
+      <div id="grandparent">
+        <div id="parent">
+          <div id="child">
+          </div>
+        </div>
+      </div>
+      <button id="clearButton">Clear Logs</button>
+      <div id="logs">
+      </div>
+    </div>
+  </body>
+</html>
