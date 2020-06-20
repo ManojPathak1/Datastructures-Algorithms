@@ -1,0 +1,55 @@
+* {
+  font-family: 'Balsamiq Sans', cursive;
+}
+
+body {
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  font-size: 30px;
+  border-radius: 10px;
+}
+
+.numsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.numBox {
+  height: 60px;
+  width: 60px;
+  border: 1px #ccc solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3px;
+  border-radius: 5px;
+  background: #fff;
+  font-size: 30px;
+}
+
+.greenBg {
+  background: #00ff44;
+  color: #fff;
+  border: 1px #00ff44 solid;
+}
+
+button {
+  font-size: 30px;
+  margin-top: 50px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.inputFieldsContainer {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
