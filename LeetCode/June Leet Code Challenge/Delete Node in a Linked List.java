@@ -11,6 +11,9 @@
  */
 class Solution {
   public void deleteNode(ListNode node) {
-          
+    while (node != null) {
+      if ()
+      node = node.next;
+    }  
   }
 }
