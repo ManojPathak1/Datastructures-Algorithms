@@ -3,7 +3,7 @@ const debounce = (cb, delay) => {
   return (...args) => {
     clearTimeout(timerId);
     timerId = setTimeout(() => {
-      cb.apply(null, args);
+      cb.apply(this, args);
     }, delay);
   }
 };
@@ -22,6 +22,3 @@ setTimeout(() => {
     debouncedSearch("abcdef", 6);
   }, 1001);
 }, 1001);
-
-// Output 4
-//  abc, abcde, abcdef

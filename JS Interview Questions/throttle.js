@@ -3,7 +3,7 @@ const throttle = (func, delay) => {
   return (...args) => {
     if (callFunc) {
       callFunc = false;
-      func.apply(null, args);
+      func.apply(this, args);
       setTimeout(() => {
         callFunc = true;
       }, delay);
@@ -25,6 +25,5 @@ const timer = setTimeout(() => {
     throttledLog(6);
   }, 2000);
 }, 2000);
-
 
 //  Output is 1, 4, 6.
