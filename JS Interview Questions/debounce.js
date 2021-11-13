@@ -23,5 +23,5 @@ setTimeout(() => {
   }, 1001);
 }, 1001);
 
-// Output 3
+// Output 4
 //  abc, abcde, abcdef
