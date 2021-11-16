@@ -1,4 +1,4 @@
-const result = await Promise.all([]);
+// Promise.all implementation
 
 Promise.all = (promises) =>
   new Promise((resolve, reject) => {
