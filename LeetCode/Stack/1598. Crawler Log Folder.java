@@ -8,7 +8,7 @@ class Solution {
           break;
         case "./":
           break;
-        default:
+        default: 
           stack.push(log);
       }
     }
